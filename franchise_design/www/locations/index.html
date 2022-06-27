@@ -1,0 +1,72 @@
+{% extends 'templates/base/layout.html' %}
+
+
+{% block content %}
+        <!--begin::Wrapper-->
+        <div class="container-fluid d-flex flex-column flex-row-fluid mt-14 p-0" style="overflow-x: hidden !important;">
+            <!--begin::row-->
+
+                <div class="row" >
+                    <div class="col-md-4 py-5 px-10">
+                        <h4 class="pink fs-1">Find a Location</h4>
+                        <div class="d-flex py-5" style="height: 80px">
+                            <input type="text" class="w-75 p-5 searchBar" placeholder="Enter City or Zip ">
+                            <button class="m-0 p-1 fs-4 bg-pink text-white w-25 search-button">Search</button>
+                        </div>
+                       
+                        
+                        <div class="mapLists">
+                            {% for item in f_list %}
+                            <div class="maplist p-5" id="location {{loop.index}}">
+                                <p class="location fs-2">
+                                    {{ item.name1 }}
+                                </p>
+                                <div class="d-flex align-items-center">
+                                    <i class="fa fa-external-link pink mr-4"></i>
+                                    <a href="/location/{{item.name}}" >Go to the franchise page</a>
+                                </div>
+
+                                <div class="d-flex">
+                                    <i class="fa fa-phone pink mr-4"></i>
+                                    <a href="/location/{{item.name}}"> {{ item.contact_number }}</a>
+                                </div>
+
+                                <div class="d-flex">
+                                    <i class="fa fa-map-marker pink mr-4"></i>
+                                    <a href="">
+                                        {{ item.address, item.address_line_2, item.postcode, item.city }}
+                                    </a>
+                                </div>
+                            </div>
+                            {% endfor %}
+
+
+                        </div>
+                    </div>
+                    <!--begin::map-->
+                    <div class="col-md-8 position-relative h-100">
+                        <div class="position-absolute top-10 z-index-1">
+                            <button class="m-0 p-3 fs-4 bg-pink text-white border-0">United Kingdom</button>
+                            <button class="m-0 p-3 fs-4 bg-white fs-pink border-pink ">International</button>
+                        </div>
+                        
+                        <div id="map"></div>
+                    </div>
+                    <!--end::map-->
+                </div>
+
+             <!--end::row-->
+        </div>
+        <!--end::Wrapper-->
+{% endblock %}
+
+{% block footer %}
+    {{ super() }}
+    
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNBpyDh37cPg4CTXRlHK8yXeRvKgezT_c&callback=initMap"
+      defer
+    ></script>
+    <script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
+    <script src="/assets/franchise_design/fd_assets/js/map/map.js"></script>
+{% endblock %}

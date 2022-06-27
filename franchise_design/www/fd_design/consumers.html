@@ -1,0 +1,216 @@
+{% extends 'templates/base/layout_dashboard.html' %}
+
+{% block content %}
+    <!--begin::Wrapper-->
+    <div class="container-fluid p-0" style="min-height: 500px;">
+        <div class="bg-pink" style="height: 80px;">
+            <div class="container d-flex justify-content-between align-items-center h-100 ">
+                <div class="font-heading text-white">My Students</div>
+                <div class="text-white">:</div>
+            </div>
+        </div>
+
+        <div class="bg-dashboard" style="min-height: 400px;">
+            <div id="contents">
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document" style="min-width: 50vw !important;">
+                <div class="modal-content" >
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Add New Student</h5>
+                        <div type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" class="display-6">&times;</span>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <div class="row">
+
+                            <form action="" id="complete_registration">
+                                
+                                <div class="row w-100">
+            
+                                    <div class="col-md-6">
+                                        <div class="form-group mb-7 ">
+                                            <label for="first_name" class=" font-options pink mb-2 font-weight-bold text-uppercase">First Name</label>
+                                            <input type="text" class="form-control" id="first_name" required="" data-description="first name" name="first_name">
+                                        </div>
+                                    </div>
+            
+                                    <div class="col-md-6">
+                                        <div class="form-group mb-7 ">
+                                            <label for="last_name" class=" font-options pink mb-2 font-weight-bold text-uppercase">Last Name</label>
+                                            <input type="text" class="form-control" id="last_name" required="" data-description="last name" name="last_name">
+                                        </div>
+                                    </div>
+            
+                                    <div class="col-md-6">
+                                        <div class="form-group mb-7 ">
+                                            <label for="gender" class=" font-options pink mb-2 font-weight-bold text-uppercase">Gender</label>
+                                            <select class="form-control" id="gender" required="" data-description="gender" name="gender" >
+                                                <option>Male</option>
+                                                <option>Female</option>
+                                                <option>Prefer to Say</option>
+                                                <option>Other</option>
+                                                
+                                            </select>
+                                        </div>
+                                    </div>
+            
+                                    <div class="col-md-6">
+                                        <div class="form-group mb-7 ">
+                                            <label for="dob" class=" font-options pink mb-2 font-weight-bold text-uppercase">Date of Birth</label>
+                                            <input type="text" class="form-control" id="dob" required="" data-description="date of birth" name="dob">
+                                        </div>
+                                    </div>
+            
+            
+                                <div class="col-md-6">
+                                    <div class="form-group mb-7 ">
+                                        <label for="customer_relationship" class=" font-options pink mb-2 font-weight-bold text-uppercase">customer relationship</label>
+                                        <select class="form-control" id="customer_relationship" required="" data-description="customer relationship" name="customer_relationship" >
+                                            <option>Mother</option>
+                                            <option>Father</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select>
+                                    </div>
+                                </div>
+            
+                                <div class="col-md-12">
+                                    <div class="form-group mb-7 ">
+                                        <div  class=" font-options pink mb-2 font-weight-bold text-uppercase">
+                                            MEDIA USAGE
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="Phone" name="medium">
+                                            <label class="form-check-label" for="inlineCheckbox1"> Media Usage -
+                                                Safeguarding is of the utmost importance to Robothink. Please tick this box only if you are happy to 
+                                        give permission for visual and audio recordings to be taken of the above Student and used 
+                                        by Robothink for promotional purposes.
+                                            </label>
+                                        </div>
+            
+                                    </div>
+            
+                                    <span>
+                                        
+                                    </span>
+
+                                </div>
+                                <div class="d-flex w-100 justify-content-start my-4">
+                                    <button id="registerButton" class="btn btn-primary">Save</button>
+                                </div>
+            
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+ 
+                </div>
+                </div>
+            </div>
+            <div class="container">
+
+                <div class="row">
+                    <div class="card w-100"></div>
+                    <div class="col-md-4 my-4 ">
+                        <div class=" bg-white p-6 rounded-top">
+                            <p class="fs-1 font-header-color ">Bunmi Benjamin</p>
+                            <div class="w-75">
+                                
+                                <div class="d-flex align-items-center justify-content-between">
+                                  <p class="font-column-color w-50 fs-6 font-weight-bold">Gender</p>
+                                  <div class="d-flex justify-content-start w-50">
+                                    <p>Male</p>
+                                  </div>
+                                  
+                                </div>
+  
+                                <div class="d-flex align-items-center justify-content-between">
+                                  <p class="w-50">Age</p>
+                                  <div class="d-flex justify-content-start w-50">
+                                    <p>25</p>
+                                  </div>
+                                  
+                                </div>
+  
+                                <div class="d-flex align-items-center justify-content-between">
+                                  <p class="w-50">Last Award</p>
+                                  <p class="w-50">-</p>
+                                </div>
+  
+                                <div class="d-flex align-items-center justify-content-between">
+                                  <p class="w-50 ">Media Usage</p>
+                                  <p class="w-50 text-danger"> <i class="fa fa-times me-3 text-danger" aria-hidden="true"></i> Denied</p>
+                                </div>
+  
+                                <div class="d-flex align-items-center justify-content-between" >
+                                  <p class="w-50">Questionaire</p>
+                                  <p class="cursor w-50 text-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</p>
+                                </div>
+  
+                                <div class="d-flex " data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                  
+                                  <p class="cursor text-warning"><i class="fa fa-pencil me-3 text-warning" aria-hidden="true"></i> Edit</p>
+                                </div>
+                            </div>
+ 
+                        </div>
+                        <div class="  p-6 bg-off-white rounded-bottom">
+
+                            <div class="d-flex">
+                                
+                                <p><i class="fa fa-times me-5 text-danger" aria-hidden="true"></i>Medical Details</p>
+                            </div>
+
+                            <p>Medical information has never been updated</p>
+
+                            <p class="text-danger">Some information is missing or out of date. 
+                                Please provide up-to-date information.
+                            </p>
+
+                            <div class="d-flex" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                
+                                <p class="cursor text-warning"> <i class="fa fa-pencil me-3 text-warning" aria-hidden="true"></i> Update</p>
+                            </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-4 my-4 ">
+                        <div class="card bg-add p-6 d-flex align-items-center justify-content-center h-100 cursor" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            
+                            <p class="fs-3 font-header-color font-weight-bold">
+                                <i class="fa fa-plus me-5 fs-3 font-header-color font-weight-bold" aria-hidden="true"></i>
+                                Add New Student
+                            </p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            </div>
+            
+
+        </div>
+
+
+
+    </div>
+    <!--end::Wrapper-->
+{% endblock %}
+
+{% block footer %}
+    {{ super() }}
+    <script src="/assets/franchise_design/fd_assets/js/router/url-router.js"></script>
+    <script>
+        window.onload = function() {
+        $('#exampleModal').on('shown.bs.modal', function () {
+        $('#myInput').trigger('focus')
+        })
+    }
+    </script>
+{% endblock %}

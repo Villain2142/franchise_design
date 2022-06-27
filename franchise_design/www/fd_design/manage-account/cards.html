@@ -1,0 +1,116 @@
+{% extends 'templates/base/layout_dashboard.html' %}
+
+{% block content %}
+    <!--begin::Wrapper-->
+    <div class="container-fluid p-0" style="min-height: 500px;">
+        <div class="bg-pink" style="height: 80px;">
+            <div class="container d-flex justify-content-between align-items-center h-100 ">
+                <div class="font-heading text-white">          
+                    Manage Your Cards
+                </div>
+                <div class="text-white">:</div>
+            </div>
+        </div>
+
+        <div class="bg-ash" style="min-height: 400px;">
+            
+            <div class="container" id="contents">
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document" style="min-width: 50vw !important;">
+                    <div class="modal-content" >
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Add Card</h5>
+                            <div type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true" class="display-6">&times;</span>
+                            </div>
+                        </div>
+
+                        <div class="container">
+                            <div class="row">
+
+                                <form action="" id="complete_registration">
+                                    
+                                    <div class="row w-100">
+                
+                                        <div class="col-md-12">
+                                            <div class="form-group mb-7 ">
+                                                <label for="first_name" class=" font-options pink mb-2 font-weight-bold text-uppercase">Name on card</label>
+                                                <input type="text" class="form-control" id="first_name" required="" data-description="first name" name="first_name">
+                                            </div>
+                                        </div>
+                
+                                        <div class="col-md-12">
+                                            <div class="form-group mb-7 ">
+                                                <label for="first_name" class=" font-options pink mb-2 font-weight-bold text-uppercase">Card number</label>
+                                                <input type="text" class="form-control" id="first_name" required="" data-description="first name" name="first_name">
+                                            </div>
+                                        </div>
+
+                
+                                        <div class="col-md-6">
+                                            <div class="form-group mb-7 ">
+                                                <label for="dob" class=" font-options pink mb-2 font-weight-bold text-uppercase">Expiry mm/yy</label>
+                                                <input type="text" class="form-control" id="dob" required="" data-description="date of birth" name="dob">
+                                            </div>
+                                        </div>
+                
+                                        <div class="col-md-6">
+                                            <div class="form-group mb-7 ">
+                                                <label for="dob" class=" font-options pink mb-2 font-weight-bold text-uppercase">CVC</label>
+                                                <input type="text" class="form-control" id="dob" required="" data-description="date of birth" name="dob">
+                                            </div>
+                                        </div>              
+
+                                        <div class="col-md-12">
+                                            <div class="form-group mb-7 ">
+                                                <label for="dob" class=" font-options pink mb-2 font-weight-bold text-uppercase">billing postcode</label>
+                                                <input type="text" class="form-control" id="dob" required="" data-description="date of birth" name="dob">
+                                            </div>
+                                        </div>   
+
+                                    <div class="d-flex w-100 justify-content-between my-4">
+                                        <button id="registerButton" class="btn btn-primary">Cancel</button>
+                                        <button id="registerButton" class="btn btn-primary">Add Card</button>
+                                    </div>
+                
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+    
+                    </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    
+                    
+                    <div class="card bg-add p-6 my-8 d-flex align-items-center justify-content-center h-100 cursor add_card" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        
+                        <p class="fs-3 font-header-color font-weight-bold">
+                            <i class="fa fa-plus me-5 fs-3 font-header-color font-weight-bold" aria-hidden="true"></i>
+                            
+                        </p>
+                    </div>
+
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <strong>Please note:</strong>  Unfortunately we are not able to accept payments via American Express
+                      </div>                 
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <!--end::Wrapper-->
+{% endblock %}
+
+{% block footer %}
+    {{ super() }}
+    <script src="/assets/franchise_design/fd_assets/js/router/url-router.js"></script>
+
+{% endblock %}

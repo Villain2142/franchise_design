@@ -1,0 +1,51 @@
+{% extends 'templates/base/layout_dashboard.html' %}
+
+{% block content %}
+    <!--begin::Wrapper-->
+    <div class="container-fluid p-0 bg-dashboard" style="min-height: 500px;">
+        <div class="bg-pink" style="height: 80px;">
+            <div class="container d-flex justify-content-between align-items-center h-100 ">
+                <div class="font-heading text-white">Payments</div>
+                <div class="text-white">:</div>
+            </div>
+        </div>
+
+        <div class="" style="min-height: 400px;">
+            
+            <div class="container" id="contents">
+
+                <div class="row">
+                    
+                    <div class="col-md-4 my-4 ">
+                        <div class="card cardOptions"></div>
+                        <div class="card bg-white py-4 p-2 shadow-sm">
+
+                            <p class="fs-1">Please note:Unfortunately we are not able to 
+                                accept payments via American Express
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="col-md-8 my-4 ">
+                        
+                        <p class="fs-1 font">Transactions</p>
+                        <span>You haven't made any payments yet.</span>
+                        
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <!--end::Wrapper-->
+{% endblock %}
+
+{% block footer %}
+    {{ super() }}
+    <script src="/assets/franchise_design/fd_assets/js/router/url-router.js"></script>
+
+{% endblock %}

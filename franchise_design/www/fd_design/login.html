@@ -1,0 +1,46 @@
+{% extends 'templates/base/layout_dashboard.html' %}
+
+{% block content %}
+    <!--begin::Wrapper-->
+    <div class="container-fluid p-0" style="min-height: 500px;">
+        <div class="bg-pink" style="height: 80px;">
+            <div class="container d-flex justify-content-between align-items-center h-100 ">
+                <div class="font-heading text-white">Register</div>
+                <div class="text-white">:</div>
+            </div>
+        </div>
+        
+        <div id="content">
+            <div class="login" id="contents">
+             
+                <div class="d-flex justify-content-center align-items-center mt-10">
+                    <div style="width: 370px;">
+                        <form action="" class="w-100">
+        
+                            <div class="form-group mb-7 ">
+                                <label for="email" class=" font-options pink mb-2 font-weight-bold text-uppercase">Email Address</label>
+                                <input type="email" class="form-control" id="email" placeholder="your@example.com">
+                            </div>
+        
+                            <div class="form-group mb-7">
+                                <label for="email" class="font-options pink mb-2 font-weight-bold text-uppercase">password</label>
+                                <input type="password" class="form-control" id="password" placeholder="your@example.com">
+                            </div>
+        
+                            <button class="bg-pink btn btn-primary font-lg w-100 mb-4">Login</button>
+                            <a href="/fd_design/register" class="bg-deep-ash btn btn-primary font-lg  w-100">Register</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--end::Wrapper-->
+{% endblock %}
+
+{% block footer %}
+    {{ super() }}
+
+    <script src="/assets/franchise_design/fd_assets/js/router/url-router.js"></script>
+{% endblock %}

@@ -1,0 +1,203 @@
+{% extends 'templates/base/layout_dashboard.html' %}
+
+{% block content %}
+    <!--begin::Wrapper-->
+    <div class="container-fluid p-0" style="min-height: 500px;">
+        <div class="bg-pink" style="height: 80px;">
+            <div class="container d-flex justify-content-between align-items-center h-100 ">
+                <div class="font-heading text-white">Register</div>
+                <div class="text-white">:</div>
+            </div>
+        </div>
+        
+        <div id="content">
+            <div class="signup" id="contents">
+                <div class="container mt-10" style="min-height: 500px;">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="display-6">Step One</div>
+                            <div class="font-lg">Account Owner</div>
+                            <p>
+                                By creating an account with Robothink you will be able to register 
+                                your Students on classes, and manage your payments.
+                            </p>
+            
+                            <p>
+                                Before we can register your Students, we need some information on you.
+                            </p>
+                        </div>
+                        
+            
+                        <div class="col-md-8">
+                            <form action="" id="register">
+                                <p>Personal Details</p>
+                                <div class="row w-100">
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-7 ">
+                                            <label for="title" class=" font-options pink mb-2 font-weight-bold text-uppercase">Title</label>
+                                            <select class="form-control" id="title" data-toggle="dropdown">
+                                                <option>Mr</option>
+                                                <option>Mrs</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                        </div>
+                                    </div>
+            
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-7 ">
+                                            <label for="first_name" class=" font-options pink mb-2 font-weight-bold text-uppercase">First Name</label>
+                                            <input type="text" class="form-control" id="first_name" required="" data-description="first name" name="first_name">
+                                        </div>
+                                    </div>
+            
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-7 ">
+                                            <label for="last_name" class=" font-options pink mb-2 font-weight-bold text-uppercase">Last Name</label>
+                                            <input type="text" class="form-control" id="last_name" required="" data-description="last name" name="last_name">
+                                        </div>
+                                    </div>
+            
+                                    <div class="col-md-12">
+                                        <div class="form-group mb-7 ">
+                                            <label for="email" class=" font-options pink mb-2 font-weight-bold text-uppercase">E-MAIL ADDRESS</label>
+                                            <input type="email" class="form-control" id="email" required="" data-description="email" name="Email" >
+                                        </div>
+                                    </div>
+            
+                                    <div class="col-md-12">
+                                        <div class="form-group mb-7 ">
+                                            <label for="confirm_email" class=" font-options pink mb-2 font-weight-bold text-uppercase"> Confirm E-MAIL ADDRESS</label>
+                                            <input type="email" class="form-control" id="confirm_email" required="" data-description="email confirmation">
+                                        </div>
+                                    </div>
+            
+            
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-7 ">
+                                            <label for="phone_no" class=" font-options pink mb-2 font-weight-bold text-uppercase">Home phone number</label>
+                                            <input type="text" class="form-control" id="phone_no" required="" data-description="phone home" name="phone_no">
+                                        </div>
+                                    </div>
+            
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-7 ">
+                                            <label for="mobile_phone_no" class=" font-options pink mb-2 font-weight-bold text-uppercase">mobile phone number</label>
+                                            <input type="text" class="form-control" id="mobile_phone_no" name="mobile_phone_no">
+                                        </div>
+                                    </div>
+            
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-7 ">
+                                            <label for="work_phone_no" class=" font-options pink mb-2 font-weight-bold text-uppercase">work phone number</label>
+                                            <input type="text" class="form-control" id="work_phone_no">
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <p>Address Details</p>
+                                <div class="row w-100">
+            
+                                    <div class="col-md-6">
+                                        <div class="form-group mb-7 ">
+                                            <label for="address" class=" font-options pink mb-2 font-weight-bold text-uppercase">Address</label>
+                                            <input type="text" class="form-control" id="address" required="" data-description="address" name="address">
+                                        </div>
+                                    </div>
+            
+                                    <div class="col-md-6">
+                                        <div class="form-group mb-7 ">
+                                            <label for="address-2" class=" font-options pink mb-2 font-weight-bold text-uppercase">Address Line 2</label>
+                                            <input type="text" class="form-control" id="address-2">
+                                        </div>
+                                    </div>
+            
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-7 ">
+                                            <label for="city" class=" font-options pink mb-2 font-weight-bold text-uppercase">city</label>
+                                            <input type="text" class="form-control" id="city" required="" data-description="city" name="city">
+                                        </div>
+                                    </div>
+            
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-7 ">
+                                            <label for="county" class=" font-options pink mb-2 font-weight-bold text-uppercase">county</label>
+                                            <input type="text" class="form-control" id="county">
+                                        </div>
+                                    </div>
+            
+                                    <div class="col-md-4">
+                                        <div class="form-group mb-7 ">
+                                            <label for="postcode" class=" font-options pink mb-2 font-weight-bold text-uppercase">postcode</label>
+                                            <input type="text" class="form-control" id="postcode" required="" data-description="postcode" name="postcode">
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <p>Marketing & Preferences</p>
+                                <div class="row w-100">
+            
+                                    <div class="col-md-12">
+                                        <div class="form-group mb-7 ">
+                                            <label for="address" class=" font-options pink mb-2 font-weight-bold text-uppercase">HOW DID YOU HEAR ABOUT US?</label>
+                                            <select class="form-control" id="lead_source" required="" data-description="lead source" name="lead_source" >
+                                                <option>website</option>
+                                                <option>Mrs</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                        </div>
+                                    </div>
+            
+                                    <div class="col-md-12">
+                                        <div class="form-group mb-7 ">
+                                            <label  class=" font-options pink mb-2 font-weight-bold text-uppercase">PLEASE
+                                                 SELECT BELOW IF YOU WOULD LIKE TO RECEIVE 
+                                                MARKETING MESSAGES FROM ROBOTHINK VIA:</label>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="Phone" name="medium">
+                                                <label class="form-check-label" for="inlineCheckbox1">Phone</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="Email" name="medium">
+                                                <label class="form-check-label" for="inlineCheckbox2">Email</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="SMS" name="medium">
+                                                <label class="form-check-label" for="inlineCheckbox2">SMS</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="Post" name="medium">
+                                                <label class="form-check-label" for="inlineCheckbox2">Post</label>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+            
+                                </div>
+                                <div class="d-flex w-100 justify-content-end my-4">
+                                    <button id="registerButton" class="btn btn-primary">Proceed to Step 2</button>
+                                </div>
+            
+                            </form>
+                        </div>
+                        
+            
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--end::Wrapper-->
+{% endblock %}
+
+{% block footer %}
+    {{ super() }}
+
+    <script src="/assets/franchise_design/fd_assets/js/router/url-router.js"></script>
+{% endblock %}
+
+
