@@ -14,7 +14,7 @@
                 <div class="overlay-wrapper " style="background-image: url('/assets/franchise_design/fd_assets/Class-Working.jpg');  background-size: cover; height: 85vh;">
                 </div>
                 <div class="overlay-layer bg-color p-2 rounded-0 flex-column text-center">
-                    <p class="text-white font-wrapper w-100 w-md-50 "><strong class="display-4">Welcome to RoboThink {{ f_doc["name1"] }}!</p>
+                    <p class="text-white font-wrapper w-100 w-md-50 "><strong class="display-4">Welcome to RoboThink {{ f_doc["name1"] }}!</strong></p>
                     <div class="  d-flex align-items-center justify-content-center">
                         <p class="text-center text-white w-100 w-md-75 font-lg">
                             Build your favorite robots, learn code and play with friends! RoboThink is a leading STEM, coding, 
@@ -129,7 +129,7 @@
                         coding skills on the path from white to black belt.
                     </p>
                     <div >
-                        <button class=" button text-uppercase">Learn more</button>
+                        <a class="button text-uppercase" href='/engineer/{{f_doc["name"]}}' role="button">Learn More</a>
                         <button class="button text-uppercase">Enroll now</button>
                     </div>
                 </div>
@@ -159,7 +159,7 @@
                         Build a foundation of coding and critical problem-solving skills through our fun and completely visual curriculum - no reading required!
                     </p>
                     <div >
-                        <button class=" button text-uppercase">Learn more</button>
+                        <a class="button text-uppercase" href='/jr_engineer/{{f_doc["name"]}}' role="button">Learn More</a>
                         <button class="button text-uppercase">Enroll now</button>
                     </div>
                 </div>
@@ -190,8 +190,8 @@
                     </p>
 
                     <div class="w-100 d-flex ">
-                        <button class=" button text-uppercase">Learn more</button>
-                        <button class="button text-uppercase">Shop now</button>
+                        <a class="button text-uppercase" href='/camps/{{f_doc["name"]}}' role="button">Learn More</a>
+                        <a class="button text-uppercase" href='/camps/{{f_doc["name"]}}' role="button">Shop Now</a>
                     </div>
                 </div>
             </div>
@@ -334,7 +334,7 @@
     
                             <h3 class="text-center text-uppercase font-weight-bold pink ">Request Info</h3>
                             <!-- Form -->
-                            <iframe src="https://link.risesales.io/widget/form/Em5N0ErRy3p2QhS7SLVE" style="border:none;width:100%;" scrolling="no" id="Em5N0ErRy3p2QhS7SLVE"></iframe>
+                            <iframe src="https://link.risesales.io/widget/form/Em5N0ErRy3p2QhS7SLVE" style="border:none;width:100%; min-height: 600px" scrolling="yes" id="Em5N0ErRy3p2QhS7SLVE"></iframe>
                             <!-- end::Form -->
                         </div>
                 </div>
@@ -347,7 +347,6 @@
             </div>
         </div>
     </div>
-
 
 
 

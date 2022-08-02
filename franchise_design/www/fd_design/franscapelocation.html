@@ -1,0 +1,53 @@
+{% extends 'templates/base/layout.html' %}
+
+{% block content %}
+<div  id="franscape-finder">
+    <style>
+         #franscape-finder-iframe {
+              width: 100%;
+              position: relative;
+              margin: 0 auto;
+         }
+#franscape-finder-height {
+           min-height: 1000px;
+       }
+       #franscape-finder-iframe {
+           width: 100%;
+           height: 1000px;
+           position: absolute;
+           top: 50px;
+           right: 0;
+           bottom: 0;
+           left: 0;
+       }
+    </style>
+
+
+   <div id="franscape-finder-height">
+        <iframe
+            id="franscape-finder-iframe"
+            width="100%"
+            allow="geolocation"
+            src="https://finder.robothink.franscape.io/"
+            name="Lesson Finder"
+            title="RoboThink Lesson Finder"
+        ></iframe>
+   </div>
+
+
+
+    <script>
+        window.onload = function() {
+            const iframeEl = document.getElementById('franscape-finder-iframe');
+            iframeEl.src = 'https://finder.robothink.franscape.io/' + window.location.search;
+
+            console.log(iframeEl)
+        }
+
+    </script>
+
+</div>
+
+
+
+{% endblock %}

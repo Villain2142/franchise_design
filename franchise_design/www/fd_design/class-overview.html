@@ -1,0 +1,422 @@
+{% extends 'templates/base/layout_dashboard.html' %}
+
+{% block content %}
+<div class="overflow-hidden position-relative ">
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document" style="min-width: 50vw !important;">
+                <div class="modal-content" >
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Add Card Details</h5>
+                        <div type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" class="display-6">&times;</span>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <div class="row">
+
+                            <form action="" id="complete_registration">
+                                <div class="w-100 my-4">
+                                    <!--begin::Input group-->
+                                    <div class="d-flex flex-column mb-7 fv-row">
+                                        <!--begin::Label-->
+                                        <label class="d-flex align-items-center fs-6 fw-bold form-label mb-2">
+                                            <span class="required">Name On Card</span>
+                                            <i class="fa fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip" title="Specify a card holder's name"></i>
+                                        </label>
+                                        <!--end::Label-->
+                                        <input type="text" id="card_name" class="form-control form-control-solid" placeholder="" name="card_name" value="Max Doe" />
+                                    </div>
+                                    <!--end::Input group-->
+                                    <!--begin::Input group-->
+                                    <div class="d-flex flex-column mb-7 fv-row">
+                                        <!--begin::Label-->
+                                        <label class="required fs-6 fw-bold form-label mb-2">Card Number</label>
+                                        <!--end::Label-->
+                                        <!--begin::Input wrapper-->
+                                        <div class="position-relative">
+                                            <!--begin::Input-->
+                                            <input type="text" id="card_number" class="form-control form-control-solid" placeholder="Enter card number" name="card_number" value="4111 1111 1111 1111" />
+                                            <!--end::Input-->
+                                            <!--begin::Card logos-->
+                                            <div class="position-absolute translate-middle-y top-50 end-0 me-5">
+                                                <img src="assets/media/svg/card-logos/visa.svg" alt="" class="h-25px" />
+                                                <img src="assets/media/svg/card-logos/mastercard.svg" alt="" class="h-25px" />
+                                                <img src="assets/media/svg/card-logos/american-express.svg" alt="" class="h-25px" />
+                                            </div>
+                                            <!--end::Card logos-->
+                                        </div>
+                                        <!--end::Input wrapper-->
+                                    </div>
+                                    <!--end::Input group-->
+                                    <!--begin::Input group-->
+                                    <div class="row mb-10">
+                                        <!--begin::Col-->
+                                        <div class="col-md-8 fv-row">
+                                            <!--begin::Label-->
+                                            <label class="required fs-6 fw-bold form-label mb-2">Expiration Date</label>
+                                            <!--end::Label-->
+                                            <!--begin::Row-->
+                                            <div class="row fv-row">
+                                                <!--begin::Col-->
+                                                <div class="col-6">
+                                                    <select name="card_expiry_month" id='card_expiry_month' class="form-select form-select-solid" data-control="select2" data-hide-search="true" data-placeholder="Month">
+                                                        <option></option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                        <option value="9">9</option>
+                                                        <option value="10">10</option>
+                                                        <option value="11">11</option>
+                                                        <option value="12">12</option>
+                                                    </select>
+                                                </div>
+                                                <!--end::Col-->
+                                                <!--begin::Col-->
+                                                <div class="col-6">
+                                                    <select name="card_expiry_year" id="card_expiry_year" class="form-select form-select-solid" data-control="select2" data-hide-search="true" data-placeholder="Year">
+                                                        <option></option>
+                                                        <option value="2022">2022</option>
+                                                        <option value="2023">2023</option>
+                                                        <option value="2024">2024</option>
+                                                        <option value="2025">2025</option>
+                                                        <option value="2026">2026</option>
+                                                        <option value="2027">2027</option>
+                                                        <option value="2028">2028</option>
+                                                        <option value="2029">2029</option>
+                                                        <option value="2030">2030</option>
+                                                        <option value="2031">2031</option>
+                                                        <option value="2032">2032</option>
+                                                    </select>
+                                                </div>
+                                                <!--end::Col-->
+                                            </div>
+                                            <!--end::Row-->
+                                        </div>
+                                        <!--end::Col-->
+                                        <!--begin::Col-->
+                                        <div class="col-md-4 fv-row">
+                                            <!--begin::Label-->
+                                            <label class="d-flex align-items-center fs-6 fw-bold form-label mb-2">
+                                                <span class="required">CVV</span>
+                                                <i class="fa fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip" title="Enter a card CVV code"></i>
+                                            </label>
+                                            <!--end::Label-->
+                                            <!--begin::Input wrapper-->
+                                            <div class="position-relative">
+                                                <!--begin::Input-->
+                                                <input type="text" class="form-control form-control-solid" minlength="3" maxlength="4" placeholder="CVV" id='card_cvv' name="card_cvv" />
+                                                <!--end::Input-->
+                                                <!--begin::CVV icon-->
+                                                <div class="position-absolute translate-middle-y top-50 end-0 me-3">
+                                                    <!--begin::Svg Icon | path: icons/duotune/finance/fin002.svg-->
+                                                    <span class="svg-icon svg-icon-2hx">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                            <path d="M22 7H2V11H22V7Z" fill="black" />
+                                                            <path opacity="0.3" d="M21 19H3C2.4 19 2 18.6 2 18V6C2 5.4 2.4 5 3 5H21C21.6 5 22 5.4 22 6V18C22 18.6 21.6 19 21 19ZM14 14C14 13.4 13.6 13 13 13H5C4.4 13 4 13.4 4 14C4 14.6 4.4 15 5 15H13C13.6 15 14 14.6 14 14ZM16 15.5C16 16.3 16.7 17 17.5 17H18.5C19.3 17 20 16.3 20 15.5C20 14.7 19.3 14 18.5 14H17.5C16.7 14 16 14.7 16 15.5Z" fill="black" />
+                                                        </svg>
+                                                    </span>
+                                                    <!--end::Svg Icon-->
+                                                </div>
+                                                <!--end::CVV icon-->
+                                            </div>
+                                            <!--end::Input wrapper-->
+                                        </div>
+                                        <!--end::Col-->
+                                    </div>
+                                    <!--end::Input group-->
+                                    <!--begin::Input group-->
+                                    <div class="d-flex flex-stack">
+                                        <!--begin::Label-->
+                                        <div class="me-5">
+                                            <label class="fs-6 fw-bold form-label">Save Card for further billing?</label>
+                                            <div class="fs-7 fw-bold text-muted">If you need more info, please check budget planning</div>
+                                        </div>
+                                        <!--end::Label-->
+                                        <!--begin::Switch-->
+                                        <label class="form-check form-switch form-check-custom form-check-solid">
+                                            <input class="form-check-input" type="checkbox" value="1" id="save_card" checked="checked" />
+                                            <span class="form-check-label fw-bold text-muted">Save Card</span>
+                                        </label>
+                                        <!--end::Switch-->
+                                    </div>
+                                    <!--end::Input group-->
+                                </div>
+
+                                <button class="btn btn-primary" onclick="return pay();" >Make Payment</button>
+                            </form>
+                        </div>
+                    </div>
+
+ 
+                </div>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="lessonCalender" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document" style="min-width: 50vw !important;">
+                <div class="modal-content" >
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Lessons Overview</h5>
+                        <div type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" class="display-6">&times;</span>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <div class="row">
+
+                            <table class="table table-striped">
+                                <thead>
+                                  <tr>                                   
+                                    <th scope="col">Day</th>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Time</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>                                 
+                                    <td>Monday</td>
+                                    <td>25 Apr 2022</td>
+                                    <td>3:30pm</td>
+                                  </tr>
+                                  <tr>                                 
+                                    <td>Monday</td>
+                                    <td>25 Apr 2022</td>
+                                    <td>3:30pm</td>
+                                  </tr>
+
+                                  <tr>                                 
+                                    <td>Monday</td>
+                                    <td>25 Apr 2022</td>
+                                    <td>3:30pm</td>
+                                  </tr>
+                                </tbody>
+                            </table>
+
+
+                        </div>
+
+                        <div type="button" class=" mb-4 btn btn-primary" data-bs-dismiss="modal" aria-label="Close">
+                            close
+                        </div>
+                    </div>
+
+    
+                </div>
+                </div>
+            </div>
+
+    <!--begin::Card-->
+    <div class="card overlay overlay-block w-100 overflow-hidden rounded-0 z-index-n1">
+        <div class="card-body p-0">
+            <div class="overlay-wrapper bg-custom-blue" style="min-height: 500px;">
+            </div>
+            <div class="overlay-layer rounded-0 bg-custom bg-opacity-25 flex-column " >
+                <div class="container">
+                    <div class="row" >
+                        <div class="col-md-12 col-12 d-flex justify-content-center align-items-center flex-column" data-aos-delay="100" data-aos="fade-down">
+                            <div class="w-75">
+                                <h1 class="text-white prefix">
+                                    Robothink
+                                </h1>
+                                <p class="text-white classTitle ">
+                                    10 weeks: Engineer Self-Driving Cars Lessons at Whitchurch Primary School
+                                    in London
+                                </p>
+                                <h1 class=" classSubtitle text-white">Mondays at 3:30PM</h1>
+
+                            </div>
+
+
+                            
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--end::Card-->
+
+    <!-- programs -->
+    <div class="container-fluid bg-background position-relative" style="min-height: 150px;">
+        <div class="container p-0  d-flex justify-content-center align-items-center flex-column">
+            <div class=" container position-absolute d-flex justify-content-center classCardWrapper flex-column  bg-white p-5  w-90  " style="top: -100px; min-height: 200px;">
+                <div class="row">
+                    <div class="col-md-8 col-12">
+                        <p class="pink classH3">10 weeks: Engineer Self-Driving Cars</p>
+                        <p class="color-ash ">for After School Clubs</p>
+                    </div>
+    
+                    <div class="col-md-4 col-12">
+                        <div class="d-flex justify-content-between">
+                            <div class="border-options p-5 ">
+                                <span></span>
+                                <span>spaces</span>
+                            </div>
+                            <div class="border-options p-5">
+
+                                <span></span>
+                                <span>days</span>
+                            
+                            </div>
+                            <div class="border-options p-5">
+                                <span>3:30</span>
+                                <span>pm</span>
+                            </div>
+                            <div class=" p-5">
+                                <span>1h30m</span>                             
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="row ">
+                    <div class="col-md-6 col-12 color-ash">
+                        <div class="pink">Cost per lesson from</div>
+                        <div>£17.50</div>
+                    </div>
+    
+                    <div class="col-md-6 col-12 d-flex justify-content-end">
+    
+                        <button class="classButton" data-bs-toggle="modal" data-bs-target="#exampleModal">Book</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+                        
+    </div>
+    <!--end::programs-->
+
+        <!-- programs -->
+        <div class="container-fluid bg-background position-relative" style="min-height: 250px;">
+            <div class="container p-0  d-flex justify-content-center align-items-center flex-column">
+
+                <div class=" d-flex justify-content-end align-items-end flex-column my-10 h-100">
+                    <div class="w-75 ">
+                        <p class="pink classH3">Information</p>
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <p class=" fw-700">First Lesson</p>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <p class="color-ash">Monday, 25 Apr 2022, 3:30pm</p>
+                            </div>
+        
+                            <div class="col-12 col-md-6">
+                                <p class=" fw-700">Last Lesson</p>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <p class="color-ash">Tuesday, 12 Jul 2022, 3:30pm</p>
+                            </div>
+        
+                            <div class="col-12 col-md-6">
+                                <p class=" fw-700">Next Available Lesson</p>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <p class="color-ash">Monday, 4 Jul 2022, 3:30pm</p>
+                            </div>
+        
+                            <div class="col-12 col-md-6">
+                                <p class="fw-700">Minimum Age</p>
+                            </div>
+                            <div class="color-ash col-12 col-md-6">
+                                <p>5 yrs</p>
+                            </div>
+        
+                            <div class="col-12 col-md-6">
+                                <p class="fw-700">Maximum Age</p>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <p class="color-ash">11 yrs</p>
+                            </div>
+    
+
+    
+                        </div>
+                       
+
+                    </div>
+                    
+                    <div class=" w-100 d-flex justify-content-center align-items-center">
+                        <button class="classButton" data-bs-toggle="modal" data-bs-target="#lessonCalender">Lesson Calender</button>
+                    </div>
+        
+                </div>
+            </div>
+    
+                            
+        </div>
+        <!--end::programs-->
+
+    <!-- programs -->
+    <div class="container-fluid p-0 position-relative venue" style="min-height: 500px;">
+        <div class=" d-flex justify-content-center align-items-center flex-column pt-10">
+            
+                <p class="pink classH3">Venue</p>
+                <p class="lead font-italic text-center"> These 10 weeks: Engineer Self-Driving Cars Lessons take place at Whitchurch Primary School in London.</p>
+
+                <div class="card bg-white p-5 classVenueWrapper d-flex justify-content-center align-items-center flex-column">
+                    <p class="pink">VENUE ADDRESS:</p>
+                    <p>Whitchurch Primary School</p>
+                    <p>Wemborough Road</p>
+                    <p>Stanmore</p>
+                    <p>London</p>
+                    <p>Middlesex</p>
+                    <p>HA7 2EQ</p>
+                    <button class="classButton"> show venue on Map</button>
+                </div>
+
+            
+
+        </div>
+                        
+    </div>
+    <!--end::programs-->
+
+        <!-- programs -->
+        <div class="container-fluid p-0 position-relative bg-background d-flex justify-content-center" style="min-height: 400px;">
+            <div class="d-flex mt-10 align-items-center flex-column">
+                
+                    <p class="font-weight-light">Browse Lessons Near you</p>
+                    <p class="text-center">Robothink has a range of Lessons available at venues right across the country. To explore the options, use our Course Finder.</p>
+                    <button class="classButton text-uppercase mb-10">Find Lesson</button>
+
+                    <span class="mb-10">Powered by <span class="pink">Franscape</span> </span>
+            </div>
+                            
+        </div>
+        <!--end::programs-->
+</div>  
+
+{% endblock %}
+
+{% block footer %}
+    {{ super() }}
+    <script>
+        window.onload = function() {
+        $('#exampleModal').on('shown.bs.modal', function () {
+        $('#myInput').trigger('focus')
+        })
+
+        $('#lessonCalender').on('shown.bs.modal', function () {
+        $('#myInput').trigger('focus')
+        })
+    }
+    </script>
+    <script src="/assets/franchise_design/fd_assets/js/booking/create.js"></script>
+{% endblock %}

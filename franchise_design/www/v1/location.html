@@ -14,7 +14,10 @@
                             <button class="m-0 p-1 fs-4 bg-pink text-white w-25 search-button">Search</button>
                         </div>
                         <div class="mapLists">
-                            <div class="maplist p-5" id="location">
+                            <div class="maplist p-5" id="location" data-lng="-0.38674" data-lat="51.59163" data-name="Barnet"
+                            data-phone="07883 268200" data-link="/barnet" data-address="Belmont Mill Hill Preparatory School, The Ridgeway, 
+                            Village, London NW7 4ED"
+                            >
                                 <p class="location fs-2">
                                     Barnet
                                 </p>
@@ -36,7 +39,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="maplist p-5" id="location2">
+                            <div class="maplist p-5" id="location" data-lng="-0.30208" data-lat="51.57959">
                                 <p class="location fs-2">
                                     Barnet
                                 </p>
@@ -58,7 +61,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="maplist p-5" id="location3">
+                            <div class="maplist p-5" id="location" data-lng="-0.31235" data-lat="51.61708">
                                 <p class="location fs-2">
                                     Barnet
                                 </p>
@@ -110,5 +113,8 @@
       defer
     ></script>
     <script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
+    <!-- <script>
+        const locations = {{coordinates | tojson}};
+    </script> -->
     <script src="/assets/franchise_design/fd_assets/js/map/map.js"></script>
 {% endblock %}

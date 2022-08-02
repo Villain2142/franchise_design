@@ -3,6 +3,7 @@
 {% block content %}
     <!--begin::Wrapper-->
     <div class="container-fluid p-0" style="min-height: 500px;">
+        
         <div class="bg-pink" style="height: 80px;">
             <div class="container d-flex justify-content-between align-items-center h-100 ">
                 <div class="font-heading text-white">Register</div>
@@ -46,33 +47,66 @@
                                     </div>
             
                                     <div class="col-md-4">
-                                        <div class="form-group mb-7 ">
+                                        <div class="fv-row form-group mb-7 ">
                                             <label for="first_name" class=" font-options pink mb-2 font-weight-bold text-uppercase">First Name</label>
-                                            <input type="text" class="form-control" id="first_name" required="" data-description="first name" name="first_name">
+                                            <input type="text" class="form-control" id="first_name" data-description="first name" name="first_name" value="">
                                         </div>
                                     </div>
             
                                     <div class="col-md-4">
-                                        <div class="form-group mb-7 ">
+                                        <div class="fv-row form-group mb-7 ">
                                             <label for="last_name" class=" font-options pink mb-2 font-weight-bold text-uppercase">Last Name</label>
-                                            <input type="text" class="form-control" id="last_name" required="" data-description="last name" name="last_name">
+                                            <input type="text" class="form-control" id="last_name" required="" data-description="last name" name="last_name" value="">
                                         </div>
                                     </div>
             
                                     <div class="col-md-12">
-                                        <div class="form-group mb-7 ">
+                                        <div class="fv-row form-group mb-7 ">
                                             <label for="email" class=" font-options pink mb-2 font-weight-bold text-uppercase">E-MAIL ADDRESS</label>
-                                            <input type="email" class="form-control" id="email" required="" data-description="email" name="Email" >
+                                            <input type="email" class="form-control" id="email" required="" data-description="email" name="email" >
                                         </div>
                                     </div>
             
                                     <div class="col-md-12">
-                                        <div class="form-group mb-7 ">
+                                        <div class="fv-row form-group mb-7 ">
                                             <label for="confirm_email" class=" font-options pink mb-2 font-weight-bold text-uppercase"> Confirm E-MAIL ADDRESS</label>
-                                            <input type="email" class="form-control" id="confirm_email" required="" data-description="email confirmation">
+                                            <input type="email" class="form-control" id="confirm_email" name="confirm_email" required="" data-description="email confirmation">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class="form-group mb-7 ">
+                                            <label for="dob" class=" font-options pink mb-2 font-weight-bold text-uppercase">Date of Birth</label>
+                                            <input type="text" class="form-control" id="dob" required="" data-description="dob" name="dob" >
                                         </div>
                                     </div>
             
+                                    <div class="col-md-12">
+                                        <div class="fv-row form-group mb-7 ">
+                                            <label for="password" class=" font-options pink mb-2 font-weight-bold text-uppercase"> Password</label>
+                                            <input type="password" class="form-control" id="password" name="password" required="" data-description="password">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class=" fv-row form-group mb-7 ">
+                                            <label for="confirm_password" class=" font-options pink mb-2 font-weight-bold text-uppercase"> Confirm Password</label>
+                                            <input type="password" class="form-control" id="confirm_password" name="confirm_password" required="" data-description="password">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group mb-7 ">
+                                            <label for="gender" class=" font-options pink mb-2 font-weight-bold text-uppercase">Gender</label>
+                                            <select class="form-control" id="gender" required="" data-description="gender" name="gender" >
+                                                <option>Male</option>
+                                                <option>Female</option>
+                                                <option>Prefer to Say</option>
+                                                <option>Other</option>
+                                                
+                                            </select>
+                                        </div>
+                                    </div>
             
                                     <div class="col-md-4">
                                         <div class="form-group mb-7 ">
@@ -100,35 +134,35 @@
                                 <div class="row w-100">
             
                                     <div class="col-md-6">
-                                        <div class="form-group mb-7 ">
+                                        <div class="fv-row form-group mb-7 ">
                                             <label for="address" class=" font-options pink mb-2 font-weight-bold text-uppercase">Address</label>
                                             <input type="text" class="form-control" id="address" required="" data-description="address" name="address">
                                         </div>
                                     </div>
             
                                     <div class="col-md-6">
-                                        <div class="form-group mb-7 ">
+                                        <div class="fv-row form-group mb-7 ">
                                             <label for="address-2" class=" font-options pink mb-2 font-weight-bold text-uppercase">Address Line 2</label>
-                                            <input type="text" class="form-control" id="address-2">
+                                            <input type="text" class="form-control" id="address-2" name="address-2">
                                         </div>
                                     </div>
             
                                     <div class="col-md-4">
-                                        <div class="form-group mb-7 ">
+                                        <div class="fv-row form-group mb-7 ">
                                             <label for="city" class=" font-options pink mb-2 font-weight-bold text-uppercase">city</label>
                                             <input type="text" class="form-control" id="city" required="" data-description="city" name="city">
                                         </div>
                                     </div>
             
                                     <div class="col-md-4">
-                                        <div class="form-group mb-7 ">
+                                        <div class="fv-row form-group mb-7 ">
                                             <label for="county" class=" font-options pink mb-2 font-weight-bold text-uppercase">county</label>
-                                            <input type="text" class="form-control" id="county">
+                                            <input type="text" class="form-control" id="county" name="county">
                                         </div>
                                     </div>
             
                                     <div class="col-md-4">
-                                        <div class="form-group mb-7 ">
+                                        <div class="fv-row form-group mb-7 ">
                                             <label for="postcode" class=" font-options pink mb-2 font-weight-bold text-uppercase">postcode</label>
                                             <input type="text" class="form-control" id="postcode" required="" data-description="postcode" name="postcode">
                                         </div>
@@ -180,6 +214,10 @@
                                 <div class="d-flex w-100 justify-content-end my-4">
                                     <button id="registerButton" class="btn btn-primary">Proceed to Step 2</button>
                                 </div>
+
+                                <div class="d-flex w-100 justify-content-end my-4">
+                                    <button id="stage2" class="btn btn-primary">stage2</button>
+                                </div>
             
                             </form>
                         </div>
@@ -198,6 +236,7 @@
     {{ super() }}
 
     <script src="/assets/franchise_design/fd_assets/js/router/url-router.js"></script>
+    <script src="/assets/franchise_design/fd_assets/js/form_validation/validation.js"></script>
 {% endblock %}
 
 

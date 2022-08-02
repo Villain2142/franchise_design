@@ -11,7 +11,7 @@ function addform(parentName){
     for (let i = 1; i < inputElements.length; i++) {
         let attributeValue = inputElements[i].getAttribute('name');
         let nodePosition = document.getElementById(parentName).childElementCount;
-        inputElements[i].setAttribute("name", `${attributeValue}${nodePosition++}`);
+        inputElements[i].setAttribute("name", `${attributeValue}`);
     }
 
     //add the delete button to the parent form

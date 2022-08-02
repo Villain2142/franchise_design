@@ -11,4 +11,7 @@ routes = [
         # {'from_route' : '/customer_info/<docname>/gallery','to_route':'customer_info/gallery'},
         # {'from_route' : '/customer_info/<docname>/contacts','to_route':'customer_info/contacts'},
         {'from_route' : '/location/<docname>','to_route':'location'},
+        {'from_route' : '/camps/<docname>','to_route':'camps'},
+        {'from_route' : '/jr_engineer/<docname>','to_route':'jr_engineer'},
+        {'from_route' : '/engineer/<docname>','to_route':'engineer'},
     ]

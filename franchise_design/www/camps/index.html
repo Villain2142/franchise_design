@@ -1,6 +1,7 @@
 {% extends 'templates/base/layout.html' %}
 
 {% block content %}
+    <!-- introduction -->
     <div class="overflow-hidden position-relative ">
         <div class=""> 
             <img class="leftt " src="/assets/franchise_design/fd_assets/shapes-1.svg" alt="">
@@ -20,12 +21,12 @@
                                         Camps
                                     </h1>
                                     <p class="text-white fs-1 text-center">Year Round & Summer Camp Programs</p>
-                                    <h1 class="pink display-7 text-center">Rapid City (Rapid City)</h1>
+                                    <h1 class="pink display-7 text-center">{{ f_doc["name1"] }}</h1>
                                     <p class="yellow fs-6 text-center mb-5">
-                                        <span class="fa fa-map-marker"></span> 5565 Bendt Dr Suite: 404, Rapid City, SD 57702
+                                        <span class="fa fa-map-marker"></span> {{ f_doc["address"]}}, {{f_doc["city"]}}, {{f_doc["postcode"] }}
                                     </p>
-                                    <p href="tel: 786-215-0200" class="yellow fs-6 text-center mb-5 w-100"   >
-                                        <span class="fa fa-phone text-center yellow" ></span> +44 78621-50200
+                                    <p href='tel: {{ f_doc["contact_number"] }}' class="yellow fs-6 text-center mb-5 w-100"   >
+                                        <span class="fa fa-phone text-center yellow" ></span> {{ f_doc["contact_number"] }}
                                     </p>
                                 </div>
 
@@ -116,7 +117,7 @@
 
                                 <div class="  h-100  text-white" >
                                     <h2 class=" display-6 my-4 text-center">NOW ENROLLING </h2>
-                                    <p class="text-brown-black text-center fs-1"> RAPID CITY </p>
+                                    <p class="text-brown-black text-center fs-1"> {{ f_doc["name1"] }} </p>
                                     <div class="d-flex justify-content-center align-items-center my-5">
                                         <button class=" button text-uppercase">view by camp</button>
                                         <button class="button text-uppercase">view by date</button>
@@ -159,10 +160,12 @@
 
                                     <div class=" " data-aos-delay="100" data-aos="fade-up">
                                         <div class="row " style="min-height: 600px;">
+
+                                            {% for item in camps_list %}
                                             <div class="col-lg-4 h-100" >
                                                 <!--begin::Card-->
                                                 <div class="card overlay overlay-block w-100 overflow-hidden mb-4">
-                                                    <div class="card-body p-0" style="background-image: url('assets/img/2-Girls-Coding-1024x683.jpg');
+                                                    <div class="card-body p-0" style="background-image: url('/assets/franchise_design/fd_assets/img/2-Girls-Coding-1024x683.jpg');
                                                     background-size: cover; ">
                                                         <div class="overlay-wrapper bg-light-brown-black" style="min-height: 400px;">
                                                         </div>
@@ -170,14 +173,14 @@
 
                                                             <div class="w-100 p-5">
                                                                 <h1 class="text-white text-right display-6">
-                                                                    RoboThink’s Global 
+                                                                    {{item.program_name}}
                                                                 </h1>
-                                                                <p class="font-lg-card"> Enables kids to learn basic coding concepts while expressing their creativity.</p>
+                                                                <p class="font-lg-card">{{item.website_description}} </p>
                                                             </div>
 
                                                             <div class="d-flex flex-row justify-content-center align-items-center">
                                                                 <i class="fa fa-calendar text-white p-4"></i>
-                                                                <p>jun 06,2022 to Jun 10, 2022</p>
+                                                                <p>{{item.start_date}} to {{item.end_date}}</p>
                                                             </div>
 
                                                             <div class="d-flex flex-row justify-content-center align-items-center">
@@ -187,103 +190,12 @@
                                                     </div>
 
                                                 </div>
-                                                <!--end::Card-->
                                             </div>
+                                            {% endfor %}
 
-                                            <div class="col-lg-4 h-100" >
-                                                <!--begin::Card-->
-                                                <div class="card overlay overlay-block w-100 overflow-hidden mb-4">
-                                                    <div class="card-body p-0" style="background-image: url('assets/img/2-Girls-Coding-1024x683.jpg');
-                                                    background-size: cover; ">
-                                                        <div class="overlay-wrapper bg-light-brown-black" style="min-height: 400px;">
-                                                        </div>
-                                                        <div class="overlay-layer rounded-0  flex-column " >
 
-                                                            <div class="w-100 p-5">
-                                                                <h1 class="text-white text-right display-6">
-                                                                    RoboThink’s Global 
-                                                                </h1>
-                                                                <p class="font-lg-card"> Enables kids to learn basic coding concepts while expressing their creativity.</p>
-                                                            </div>
-
-                                                            <div class="d-flex flex-row justify-content-center align-items-center">
-                                                                <i class="fa fa-calendar text-white p-4"></i>
-                                                                <p>jun 06,2022 to Jun 10, 2022</p>
-                                                            </div>
-
-                                                            <div class="d-flex flex-row justify-content-center align-items-center">
-                                                                <p>Details and Availaibility</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                                <!--end::Card-->
-                                            </div>
-
-                                            <div class="col-lg-4 h-100" >
-                                                <!--begin::Card-->
-                                                <div class="card overlay overlay-block w-100 overflow-hidden mb-4">
-                                                    <div class="card-body p-0" style="background-image: url('assets/img/2-Girls-Coding-1024x683.jpg');
-                                                    background-size: cover; ">
-                                                        <div class="overlay-wrapper bg-light-brown-black" style="min-height: 400px;">
-                                                        </div>
-                                                        <div class="overlay-layer rounded-0  flex-column " >
-
-                                                            <div class="w-100 p-5">
-                                                                <h1 class="text-white display-6 text-right">
-                                                                    RoboThink’s Global 
-                                                                </h1>
-                                                                <p class="font-lg-card"> Enables kids to learn basic coding concepts while expressing their creativity.</p>
-                                                            </div>
-
-                                                            <div class="d-flex flex-row justify-content-center align-items-center">
-                                                                <i class="fa fa-calendar text-white p-4"></i>
-                                                                <p>jun 06,2022 to Jun 10, 2022</p>
-                                                            </div>
-
-                                                            <div class="d-flex flex-row justify-content-center align-items-center">
-                                                                <p>Details and Availaibility</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                                <!--end::Card-->
-                                            </div>
                                         </div>
                                     </div>
-                                    <button onclick="return changeColumn()">move</button>
-                                    <table class="table gs-7 gy-7 gx-7 bg-white">
-                                        <thead>
-                                            <tr class="fw-bold fs-6 text-gray-800 border-bottom border-gray-200">
-                                                <th>Name</th>
-                                                <th>Position</th>
-                                                <th>Office</th>
-                                                <th>Age</th>
-                                                
-                                                
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Tiger Nixon</td>
-                                                <td>System Architect</td>
-                                                <td>Edinburgh</td>
-                                                <td>61</td>
-                                                
-                                                
-                                            </tr>
-                                            <tr>
-                                                <td>Garrett Winters</td>
-                                                <td>Accountant</td>
-                                                <td>Tokyo</td>
-                                                <td>63</td>
-                                                
-                                                
-                                            </tr>
-                                        </tbody>
-                                    </table>
         
                                 </div>
 
@@ -433,38 +345,4 @@
             <button class=" button">Request Franchise Info</button>
         </div>
     </div>
-
-    <!-- counter -->
-    <div class="container-fluid M-0 p-0">
-        <!--begin::Card-->
-        <div class="card rounded-0 w-100 bg-pink "  >
-            <div class="card-body p-0 position-relative ">
-                <div class="overlay-wrapper w-100 opacity-25" style="background-image: url('assets/pattern.svg');
-                    background-position: center center; background-size: 200px auto; height: 70px; ">
-                    
-                    
-                </div>
-                <div class="position-absolute top-0 d-flex justify-content-center align-items-center w-100 h-100 text-center">
-                    <p class="text-white fs-1">Join <span id="counter"> </span>+ kids around the world</p>
-                </div>
-                
-            </div>
-        </div>
-        <!--end::Card-->
-                        
-    </div>
-    <!--end:: counter -->
-
-    {% endblock %}
-
-    {% block footer %}
-        {{ super() }}
-    
-        <script src="/assets/franchise_design/fd_assets/js/booking/camp.js"></script>
-    {% endblock %}
-
-
-
-    
-
-</html>
+{% endblock %}

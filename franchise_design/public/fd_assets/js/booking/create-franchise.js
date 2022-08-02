@@ -9,6 +9,7 @@ var KTCreateApp = (function () {
         n = [];
     return {
         init: function () {
+            
             (e = document.querySelector("#kt_modal_create_app")) &&
                 (new bootstrap.Modal(e),
                 (t = document.querySelector("#kt_modal_create_app_stepper")),
@@ -25,11 +26,12 @@ var KTCreateApp = (function () {
                 i.on("kt.stepper.next", function (e) {
                     
                     var t = n[e.getCurrentStepIndex() - 1];
+                    
                     t
                         ? t.validate().then(function (t) {
-                              console.log("validated!"),
+                              
                                   "Valid" == t
-                                      ? e.goNext()
+                                      ? (e.goNext(), KTUtil.scrollTop())
                                       : Swal.fire({
                                             text: "Sorry, looks like there are some errors detected, please try again.",
                                             icon: "error",
@@ -69,20 +71,33 @@ var KTCreateApp = (function () {
                     n[3].revalidateField("card_expiry_year");
                 }),
                 n.push(
+                    
                     FormValidation.formValidation(o, {
-                        fields: { name: { validators: { notEmpty: { message: "App name is required" } } }, category: { validators: { notEmpty: { message: "Category is required" } } } },
+                        fields: {
+                            parentname: {validators: { notEmpty: { message: "name is required" } }},
+                            email: {validators: { notEmpty: { message: "email is required" } }},
+                            mobile: {validators: { notEmpty: { message: "mobile is required" } }},
+                            childname: {validators: { notEmpty: { message: "child name is required" } }},
+                            age: {validators: { notEmpty: { message: "age is required" } }},
+                        },
                         plugins: { trigger: new FormValidation.plugins.Trigger(), bootstrap: new FormValidation.plugins.Bootstrap5({ rowSelector: ".fv-row", eleInvalidClass: "", eleValidClass: "" }) },
                     })
                 ),
                 n.push(
                     FormValidation.formValidation(o, {
-                        fields: { framework: { validators: { notEmpty: { message: "Framework is required" } } } },
+                        fields: {
+                            address1: {validators: { notEmpty: { message: "address1 is required" } }},
+                            address2: {validators: { notEmpty: { message: "address2 is required" } }},
+                            town: {validators: { notEmpty: { message: "town is required" } }},
+                            postcode: {validators: { notEmpty: { message: "postcode is required" } }},
+                          
+                        },
                         plugins: { trigger: new FormValidation.plugins.Trigger(), bootstrap: new FormValidation.plugins.Bootstrap5({ rowSelector: ".fv-row", eleInvalidClass: "", eleValidClass: "" }) },
                     })
                 ),
                 n.push(
                     FormValidation.formValidation(o, {
-                        fields: { dbname: { validators: { notEmpty: { message: "Database name is required" } } }, dbengine: { validators: { notEmpty: { message: "Database engine is required" } } } },
+                        fields: { plan: { validators: { notEmpty: { message: "choose a plan" } } }, dbengine: { validators: { notEmpty: { message: "Database engine is required" } } } },
                         plugins: { trigger: new FormValidation.plugins.Trigger(), bootstrap: new FormValidation.plugins.Bootstrap5({ rowSelector: ".fv-row", eleInvalidClass: "", eleValidClass: "" }) },
                     })
                 ),
@@ -93,7 +108,6 @@ var KTCreateApp = (function () {
                             card_number: { validators: { notEmpty: { message: "Card member is required" }, creditCard: { message: "Card number is not valid" } } },
                             card_expiry_month: { validators: { notEmpty: { message: "Month is required" } } },
                             card_expiry_year: { validators: { notEmpty: { message: "Year is required" } } },
-                            parentname: {validators: { notEmpty: { message: "name is required" } }},
                             card_cvv: { validators: { notEmpty: { message: "CVV is required" }, digits: { message: "CVV must contain only digits" }, stringLength: { min: 3, max: 4, message: "CVV must contain 3 to 4 digits only" } } },
                         },
                         plugins: { trigger: new FormValidation.plugins.Trigger(), bootstrap: new FormValidation.plugins.Bootstrap5({ rowSelector: ".fv-row", eleInvalidClass: "", eleValidClass: "" }) },

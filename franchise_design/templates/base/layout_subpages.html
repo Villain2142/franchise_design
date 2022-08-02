@@ -16,11 +16,23 @@
         <link rel="stylesheet" href="/assets/franchise_design/fd_icons/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,500;1,700;1,900&display=swap" rel="stylesheet">
         <script src="/assets/franchise_design/fd_assets/js/main.js"></script>
+        <script>
+            window.frappe = {};
+            frappe.ready_events = [];
+            frappe.ready = function(fn) {
+                frappe.ready_events.push(fn);
+            }
+            window.dev_server = {{ dev_server }};
+            window.socketio_port = {{ (frappe.socketio_port or 'null') }};
+            window.show_language_picker = {{ show_language_picker }};
+        </script>
     {% endblock %}
   </head>
 
-
-  <body class="container-fluid p-0  ">
+  <body frappe-session-status="{{ 'logged-in' if frappe.session.user != 'Guest' else 'logged-out'}}"
+	data-path="{{ path | e }}" {%- if template and template.endswith('.md') %} frappe-content-type="markdown" {%- endif
+	%} class="{{ body_class or ''}}" 
+    class="container-fluid p-0  ">
 
     {% block navbar %}
     <nav id="nav">
@@ -268,9 +280,22 @@
         <script src="/assets/franchise_design/fd_assets/js/plugins.bundle.js"></script>
         <script src="/assets/franchise_design/fd_assets/js/scripts.bundle.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="/assets/js/libs.min.js?ver=1637859294.0"></script>
+		<script type="text/javascript" src="/assets/js/desk.min.js?ver=1637859294.0"></script>
+        <script>frappe.csrf_token = "{{frappe.session.csrf_token}}";</script>
         <script>
             AOS.init();  
         </script>
+        <script>
+			frappe.boot = {
+				sysdefaults: {
+					float_precision: parseInt("3"),
+					date_format: "dd-mm-yyyy",
+				}
+			};
+			// for backward compatibility of some libs
+			frappe.sys_defaults = frappe.boot.sysdefaults;
+		</script>
     {% endblock %}
     
   </body>

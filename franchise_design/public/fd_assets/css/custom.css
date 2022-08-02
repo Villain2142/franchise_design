@@ -165,6 +165,11 @@ input:focus {
 .bg-custom-blue{
     background-image: linear-gradient(to bottom, var(--blue),#161c2d);
 }
+
+.border-options{
+    border-right: 2px solid var(--deepash);
+    
+}
 .bg-ash{
     background-color: var(--ash) !important;
 }
@@ -484,7 +489,12 @@ path.icon-outline {
 .exclamation{
     position: absolute;
     top: -30px !important;
+    right: 0px;
     font-size: 15px !important;
+}
+
+.w-10{
+    width: 10%;
 }
 main .right{
     right: 0px !important;
@@ -537,7 +547,7 @@ main .left, main .leftt{
 }
 
 .bg-yellow{
-    background-color:  var(--yellow);
+    background-color: #fff27d !important;
 }
 
 .moveup{
@@ -584,6 +594,83 @@ main .left, main .leftt{
     width: 260px;
     top: 100px;
 }
+
+.prefix{
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.classTitle{
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.classSubtitle{
+    font-size: 2rem;
+    font-weight: 300;
+}
+.w-90{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+}
+
+.classH3 {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.color-ash{
+    color: #76868b;
+    text-align: left;
+}
+
+.font-italic {
+    font-style: italic!important;
+}
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+.bg-background {
+    background-color: #e9eced!important;
+}
+
+.font-weight-light {
+    font-weight: 300!important;
+    color: #475154;
+    font-size: 2rem;
+}
+
+.classButton{
+    background-color: var(--pink);
+    color: white;
+    padding: 10px 40px;
+    border-radius: 20px;
+    border: none;
+    
+}
+
+.venue {
+    background-color: #d8dedf;
+}
+.classVenueWrapper {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 2rem;
+    box-shadow: 0 0.25rem 2rem rgb(0 0 0 / 25%);
+    width: 400px;
+}
+
+.classCardWrapper {
+    background-color: #fff;
+   
+    border-radius: 2rem;
+    box-shadow: 0 0.25rem 2rem rgb(0 0 0 / 25%);
+}
+
 
 @media screen and (max-width: 1024px) {
 

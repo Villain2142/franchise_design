@@ -1,0 +1,314 @@
+{% extends 'templates/base/layout_subpages.html' %}
+
+{% block content %}
+    <!-- introduction -->
+    <div class="overflow-hidden position-relative ">
+    <div class=""> 
+        <img class="leftt " src="/assets/franchise_design/fd_assets/shapes-1.svg" alt="">
+    </div>
+
+    <!--begin::Card-->
+    <div class="card overlay overlay-block w-100 overflow-hidden rounded-0 z-index-n1">
+        <div class="card-body p-0">
+            <div class="overlay-wrapper bg-dark-blue" style="min-height: 700px;">
+            </div>
+            <div class="overlay-layer rounded-0 bg-custom bg-opacity-25 flex-column " >
+
+                <div class="container">
+                    <div class="row" >
+                        <div class="col-md-6 col-12 d-flex justify-content-center align-items-center flex-column" data-aos-delay="100" data-aos="fade-down">
+                            <div class="w-100">
+                                    <h1 class="text-white display-2 text-center font-italic">
+                                        Junior Engineer
+                                    </h1>
+                                    <p class="text-white fs-1 text-center">
+                                        Visual Coding Program for
+                                        Kids Ages 5 to 7
+                                    </p>
+                                    <h1 class="pink display-7 text-center">{{ f_doc["name1"] }}</h1>
+                                    <p class="yellow fs-6 text-center mb-5">
+                                        <span class="fa fa-map-marker"></span> {{ f_doc["address"]}}, {{f_doc["city"]}}, {{f_doc["postcode"] }}
+                                    </p>
+                                    <p href='tel: {{ f_doc["contact_number"] }}' class="yellow fs-6 text-center mb-5 w-100"   >
+                                        <span class="fa fa-phone text-center yellow" ></span> {{ f_doc["contact_number"] }}
+                                    </p>
+                            </div>
+
+                            <div>
+                                <button class=" button bg-blue text-uppercase">Enroll Now</button>
+                            </div>
+                            
+                        </div>
+
+
+                        <div class="col-md-6 col-12 mob-noshow">
+
+                            <div id="kt_carousel_1_carousel" class="carousel carousel-custom slide" data-bs-ride="carousel" data-bs-interval="8000">
+                                <div class="carousel-inner" style="height: 500px">
+                                    <div class="carousel-item active">
+                                        <div class="w-100 h-100 position-relative" data-aos-delay="100" data-aos="fade-left">
+                                            <img src="/assets/franchise_design/fd_assets/img/shapes-online-background.png" class=" position-absolute top-0 w-100" alt="">
+                                            <img src="/assets/franchise_design/fd_assets/img/girl-robothink-online.png"  class="position-absolute top-0 start-0 w-md-75 w-100" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="w-100 h-100 position-relative" data-aos-delay="100" data-aos="fade-left">
+                                            <img src="/assets/franchise_design/fd_assets/img/shapes-online-background.png" class=" position-absolute top-0 w-100" alt="">
+                                            <img src="/assets/franchise_design/fd_assets/img/girl-robothink-online.png"  class="position-absolute top-0 start-0 w-md-75 w-100" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="w-100 h-100 position-relative" data-aos-delay="100" data-aos="fade-left">
+                                            <img src="/assets/franchise_design/fd_assets/img/shapes-online-background.png" class=" position-absolute top-0 w-100" alt="">
+                                            <img src="/assets/franchise_design/fd_assets/img/girl-robothink-online.png"  class="position-absolute top-0 start-0 w-md-75 w-100" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end::Card-->
+</div>  
+
+
+<div class="container my-7">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="d-flex align-items-center justify-content-center h-100 ">
+                <div class=" rounded-circle bg-custom-pink cover w-md-100 w-100 position-relative">
+                    <img src="/assets/franchise_design/fd_assets/img/Kids-Looking-at-Laptop-1024x683.jpg" class=" position-absolute top-0  back-cover-right rounded-circle" alt="airplane project">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-7 my-5">
+            <div class="h-100 d-flex justify-content-center flex-column position-relative">
+                <img class="position-absolute bottom-0 end-0 opacity-50 w-50 img-fluid" src="/assets/franchise_design/fd_assets/hero-background-right.svg" alt="">
+                
+                <h2 class=" font-xl-h2  mb-4 text-uppercase">CODING FOR YOUNG LEARNERS</h2>
+                <p class="font-lg text-brown-black ">
+
+                    Code Ninjas JR builds a foundation of coding and problem-solving skills for kids ages 5-7 through our 
+                    fun and completely visual curriculum – no reading required!
+                </p>
+
+                <p class="font-lg text-brown-black ">
+
+                    Our world-class program combines storytelling and game building with hands-on projects for an immersive education experience.
+
+
+                </p>
+
+                <div class="mt-7">
+                    <a href="/fd_design/enroll" class=" button text-uppercase">Register your Interest</a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+
+<!-- programs -->
+<div class="container-fluid my-5 p-0">
+
+        <!--begin::Card-->
+        <div class="card overlay  w-100 overflow-hidden rounded-0 position-relative h-100 " >
+        <div class=" overlay-content bg-dark-blue d-flex align-items-center justify-content-center flex-column  card-body p-0"  >
+            
+                <div class="rounded-0 bg-opacity-25 h-100 z-index-1   " >
+                    <div class="container">
+                        <div class="row" style="min-height: 60vh !important;">
+
+                            <div class=" container  flex-column d-flex align-items-center justify-content-centerh-100  text-white">
+                                <h2 class=" font-xl-h2 text-white mb-4 text-center">CODING FUNDAMENTALS THROUGH PLAY</h2>
+
+                                <div class="container ">
+                                    <div class="row">
+                                        <div class="col-md-6 ">
+                                            <div class="d-flex align-items-baseline ">
+                                                <span class="fa fa-arrow-circle-o-right pink arrow"></span>                                                         
+                                                <h1 class="text-white font-lg px-4">Learn to code through storytelling and game building, hands-on projects, and play.</h1>                                                           
+                                            </div>
+
+                                            <div class="d-flex align-items-baseline">
+                                                <span class="fa fa-arrow-circle-o-right pink arrow"></span>                                                               
+                                                <h1 class="text-white font-lg px-4">Completely visual and tactile learning – no reading required.</h1>                                                           
+                                            </div>
+                                            <div class="d-flex align-items-baseline">
+                                                <span class="fa fa-arrow-circle-o-right pink arrow"></span>                                                             
+                                                <h1 class="text-white font-lg px-4">
+                                                    Boost ninja skills in robotics, problem solving, and teamwork.</h1>                                                           
+                                            </div>
+                                            <div class="d-flex align-items-baseline">
+                                                <span class="fa fa-arrow-circle-o-right pink arrow"></span>                                                              
+                                                <h1 class="text-white font-lg px-4"> Build and grow alongside fellow ninjas in our state-of-the-art dojo.</h1>                                                           
+                                            </div>
+                                            <div class="d-flex align-items-baseline">
+                                                <span class="fa fa-arrow-circle-o-right pink arrow"></span>                                                             
+                                                <h1 class="text-white font-lg px-4">Receive full support and encouragement from Code Senseis®.</h1>                                                           
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 d-flex align-items-center">
+
+                                            <img src="/assets/franchise_design/fd_assets/img/Teacher-Explaining-to-Group-1024x683.jpg" class="img-fluid rounded-circle" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+    
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            
+
+        </div>
+
+        <div class=" w-100 opacity-25 position-absolute top-0 h-100 " style="background-image: url('assets/pattern.svg');
+            background-position: center center; background-size: 200px auto; ">
+        </div>
+    </div>
+    <!--end::Card-->                          
+</div>
+<!--end::programs-->
+<div class="container mb-5">
+    <div class="row" >
+        <div class="col-md-5">
+            <div class="d-flex align-items-center justify-content-center h-100 ">
+                <div class=" rounded-circle bg-custom-pink cover w-md-100 w-100 position-relative">
+                    <img src="/assets/franchise_design/fd_assets/img/Kids-Looking-at-Laptop-1024x683.jpg" class=" position-absolute top-0  back-cover-right rounded-circle" alt="airplane project">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <div class="h-100 d-flex justify-content-center flex-column"  data-aos="zoom-in" >
+                <h2 class=" font-xl-h2 pink ">SCRATCHJR®</h2>
+                <div class="d-flex flex-row align-items-baseline ">  
+                    <span class="fa fa-arrow-circle-o-right pink arrow"></span>
+                    <p class="font-lg text-brown-black px-4"> Leading graphical block-based visual programming that kids love. </p>                           
+                    
+                </div >
+
+                <div class="d-flex flex-row align-items-baseline ">  
+                    <span class="fa fa-arrow-circle-o-right pink arrow"></span>
+                    <p class="font-lg text-brown-black px-4">Create interactive games, stories and animations. </p>                           
+                    
+                </div >
+
+                <div class="d-flex flex-row align-items-baseline ">  
+                    <span class="fa fa-arrow-circle-o-right pink arrow"></span>
+                    <p class="font-lg text-brown-black px-4">Enables kids to learn basic coding concepts while expressing their creativity. </p>                           
+                    
+                </div >
+
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-5 order-md-2">
+            <div class="d-flex align-items-center justify-content-center h-100 ">
+                <div class=" rounded-circle bg-custom-pink cover w-md-100 w-100 position-relative">
+                    <img src="/assets/franchise_design/fd_assets/img/Kids-Looking-at-Laptop-1024x683.jpg" class=" position-absolute top-0  back-cover-left rounded-circle" alt="airplane project">
+                </div>
+                
+            </div>
+        </div>
+        <div class="col-md-7 order-md-1">
+            <div class="h-100 d-flex justify-content-center flex-column" data-aos="zoom-in">
+                <h2 class="font-xl-h2 pink">ROBOTICS JR</h2>
+
+                <div class="d-flex flex-row align-items-baseline ">  
+                    <span class="fa fa-arrow-circle-o-right pink arrow"></span>
+                    <p class="font-lg text-brown-black px-4">   Existing after school programs are boring and parents have to drag kids there.</p>                           
+                    
+                </div >
+
+                <div class="d-flex flex-row align-items-baseline ">  
+                    <span class="fa fa-arrow-circle-o-right pink arrow"></span>
+                    <p class="font-lg text-brown-black px-4">  Create and play using our exclusive Ninja Toolbox.</p>                           
+                    
+                </div >
+
+                <div class="d-flex flex-row align-items-baseline ">  
+                    <span class="fa fa-arrow-circle-o-right pink arrow"></span>
+                    <p class="font-lg text-brown-black px-4">  Build original projects to learn robotics and have fun with freestyle blocks.</p>                           
+                    
+                </div >
+            </div>
+        </div>
+    </div>              
+</div>
+
+<!-- ======= Enroll Section ======= -->
+<section class="position-relative d-flex justify-content-center align-items-center flex-column bg-deep-ash" style="min-height: 300px">
+    <img class="position-absolute end-0 img-fluid w-25" src="/assets/franchise_design/fd_assets/image13-1.png" alt="">
+    <h2 class="text-brown-black font-xl-h1 text-center">Enroll today and see the RoboThink Difference</h2>
+    <button class=" button">Enroll Now</button>
+</section><!-- ======= Enroll Section ======= -->
+
+<!-- programs -->
+<div class="container-fluid M-0 p-0">
+
+    <!--begin::Card-->
+    <div class="card overlay  w-100 overflow-hidden rounded-0 position-relative h-100 " >
+        <div class=" overlay-content bg-dark-blue d-flex align-items-center justify-content-center flex-column  card-body p-0"  >
+            
+                <div class="rounded-0 bg-opacity-25 h-100 z-index-1   " >
+                    <div class="container">
+                        <div class="d-flex align-items-center justify-content-center" style="min-height: 500px !important;">
+
+                            <div class="   flex-column d-flex align-items-center justify-content-center w-100 w-md-75  h-100 text-center text-white">
+                                <h2 class=" font-xl-h2 text-white mb-4">Our Software</h2>
+                                <p class="font-lg  mb-4">
+                                    We believe that software can be excellent tool to introduce students to the world of computer programming.
+                                        Our software engineers breakdown and simplify coding concepts and tools into visual figures and processes 
+                                    to make it easy for students to understand these topics.
+                                </p>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-6 col-12">
+                                            <img src="/assets/franchise_design/fd_assets/img/image71.png" alt="" class="img-fluid w-50">
+                                            <p class="mt-4 text-white fs-1">Introduction to Coding​</p>
+                                        </div>
+                                        <div class="col-md-6 col-12">
+                                            <img src="/assets/franchise_design/fd_assets/img/video-game-design.png" alt="" class="img-fluid w-50">
+                                            <p class="mt-4 text-white fs-1">Video Game Design​</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+    
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            
+
+        </div>
+
+        <div class=" w-100 opacity-25 position-absolute top-0 h-100 " style="background-image: url('assets/pattern.svg');
+            background-position: center center; background-size: 200px auto; ">
+        </div>
+    </div>
+    
+                    
+</div>
+<!--end::programs-->
+{% endblock %}

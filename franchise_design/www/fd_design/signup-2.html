@@ -1,97 +1,129 @@
-<div class="stage2">
-    <div class="container mt-10" style="min-height: 500px;">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="display-6">Step One</div>
-                <div class="font-lg">Add a Student</div>
-                <p>
-                    Please fill in details of your Students.
-                </p>
+{% extends 'templates/base/layout_dashboard.html' %}
+
+{% block content %}
+    <!--begin::Wrapper-->
+    <div class="container-fluid p-0" style="min-height: 500px;">
+        
+        
+        <div id="content">
+            <div class="signup" id="contents">
+                <div class="container mt-10" style="min-height: 500px;">
+
+
+                    <div class="stage2">
+                        <div class="container mt-10" style="min-height: 500px;">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="display-6">Step One</div>
+                                    <div class="font-lg">Add a Student</div>
+                                    <p>
+                                        Please fill in details of your Students.
+                                    </p>
+                                </div>
+                                
+                    
+                                <div class="col-md-8">
+                                    <form action="" id="complete_registration">
+                                        <p>Personal Details</p>
+                                        <div class="row w-100">
+                    
+                                            <div class="col-md-6">
+                                                <div class="form-group mb-7 ">
+                                                    <label for="first_name" class=" font-options pink mb-2 font-weight-bold text-uppercase">First Name</label>
+                                                    <input type="text" class="form-control" id="first_name" required="" data-description="first name" name="first_name">
+                                                </div>
+                                            </div>
+                    
+                                            <div class="col-md-6">
+                                                <div class="form-group mb-7 ">
+                                                    <label for="last_name" class=" font-options pink mb-2 font-weight-bold text-uppercase">Last Name</label>
+                                                    <input type="text" class="form-control" id="last_name" required="" data-description="last name" name="last_name">
+                                                </div>
+                                            </div>
+                    
+                                            <div class="col-md-6">
+                                                <div class="form-group mb-7 ">
+                                                    <label for="gender" class=" font-options pink mb-2 font-weight-bold text-uppercase">Gender</label>
+                                                    <select class="form-control" id="gender" required="" data-description="gender" name="gender" >
+                                                        <option>Male</option>
+                                                        <option>Female</option>
+                                                        <option>Prefer to Say</option>
+                                                        <option>Other</option>
+                                                        
+                                                    </select>
+                                                </div>
+                                            </div>
+                    
+                                            <div class="col-md-6">
+                                                <div class="form-group mb-7 ">
+                                                    <label for="dob" class=" font-options pink mb-2 font-weight-bold text-uppercase">Date of Birth</label>
+                                                    <input type="text" class="form-control" id="dob" required="" data-description="date of birth" name="dob">
+                                                </div>
+                                            </div>
+                    
+                    
+                                        <div class="col-md-12">
+                                            <div class="form-group mb-7 ">
+                                                <label for="customer_relationship" class=" font-options pink mb-2 font-weight-bold text-uppercase">customer relationship</label>
+                                                <select class="form-control" id="customer_relationship" required="" data-description="customer relationship" name="customer_relationship" >
+                                                    <option>Mother</option>
+                                                    <option>Father</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="col-md-12">
+                                            <div class="form-group mb-7 ">
+                                                <div  class=" font-options pink mb-2 font-weight-bold text-uppercase">
+                                                    MEDIA USAGE
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="Phone" name="medium">
+                                                    <label class="form-check-label" for="inlineCheckbox1">Permit Media Usage</label>
+                                                </div>
+                    
+                                            </div>
+                    
+                                            <span>
+                                                Safeguarding is of the utmost importance to Robothink. Please tick this box only if you are happy to 
+                                                give permission for visual and audio recordings to be taken of the above Student and used 
+                                                by Robothink for promotional purposes.
+                                            </span>
+                                            <p>You can add more Students from inside your account once it is registered.</p>
+                    
+                                        </div>
+                                        <div class="d-flex w-100 justify-content-end my-4">
+                                            <button id="addStudentButton" class="btn btn-primary">Complete Registration</button>
+                                        </div>
+                    
+                                        </div>
+                                    </form>
+                                </div>
+                                
+                    
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-
-            <div class="col-md-8">
-                <form action="" id="complete_registration">
-                    <p>Personal Details</p>
-                    <div class="row w-100">
-
-                        <div class="col-md-6">
-                            <div class="form-group mb-7 ">
-                                <label for="first_name" class=" font-options pink mb-2 font-weight-bold text-uppercase">First Name</label>
-                                <input type="text" class="form-control" id="first_name" required="" data-description="first name" name="first_name">
-                            </div>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="form-group mb-7 ">
-                                <label for="last_name" class=" font-options pink mb-2 font-weight-bold text-uppercase">Last Name</label>
-                                <input type="text" class="form-control" id="last_name" required="" data-description="last name" name="last_name">
-                            </div>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="form-group mb-7 ">
-                                <label for="gender" class=" font-options pink mb-2 font-weight-bold text-uppercase">Gender</label>
-                                <select class="form-control" id="gender" required="" data-description="gender" name="gender" >
-                                    <option>Male</option>
-                                    <option>Female</option>
-                                    <option>Prefer to Say</option>
-                                    <option>Other</option>
-                                    
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="form-group mb-7 ">
-                                <label for="dob" class=" font-options pink mb-2 font-weight-bold text-uppercase">Date of Birth</label>
-                                <input type="text" class="form-control" id="dob" required="" data-description="date of birth" name="dob">
-                            </div>
-                        </div>
-
-
-                    <div class="col-md-12">
-                        <div class="form-group mb-7 ">
-                            <label for="customer_relationship" class=" font-options pink mb-2 font-weight-bold text-uppercase">customer relationship</label>
-                            <select class="form-control" id="customer_relationship" required="" data-description="customer relationship" name="customer_relationship" >
-                                <option>Mother</option>
-                                <option>Father</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="col-md-12">
-                        <div class="form-group mb-7 ">
-                            <div  class=" font-options pink mb-2 font-weight-bold text-uppercase">
-                                MEDIA USAGE
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="Phone" name="medium">
-                                <label class="form-check-label" for="inlineCheckbox1">Permit Media Usage</label>
-                            </div>
-
-                        </div>
-
-                        <span>
-                            Safeguarding is of the utmost importance to Robothink. Please tick this box only if you are happy to 
-                            give permission for visual and audio recordings to be taken of the above Student and used 
-                            by Robothink for promotional purposes.
-                        </span>
-                        <p>You can add more Students from inside your account once it is registered.</p>
-
-                    </div>
-                    <div class="d-flex w-100 justify-content-end my-4">
-                        <button id="registerButton" class="btn btn-primary">Complete Registration</button>
-                    </div>
-
-                    </div>
-                </form>
-            </div>
-            
-
         </div>
+
     </div>
-</div>
+    <!--end::Wrapper-->
+{% endblock %}
+
+{% block footer %}
+    {{ super() }}
+
+    <script src="/assets/franchise_design/fd_assets/js/router/url-router.js"></script>
+    <script src="/assets/franchise_design/fd_assets/js/form_validation/validation.js"></script>
+{% endblock %}
+
+
+
+
+
+
